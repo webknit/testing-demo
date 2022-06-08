@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "percy": "PERCY_TOKEN=7278d9978205ebfd91cec019a21d8c1fe8fe9ac01a17e303df5fbf536c890a3c percy snapshot ./public"
   },
   "eslintConfig": {
     "extends": [

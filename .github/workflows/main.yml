@@ -15,5 +15,5 @@ jobs:
       - name: Say something
         run: |
           npm install
-          npm run start
-          npx percy snapshot snapshots.yml
+          npm run build
+          npm run percy
