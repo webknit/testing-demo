@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - 'main'
-  env:
-    message: 'conversation'
-    my_token: ${{ secrets.GITHUB_TOKEN }}
+env:
+  message: 'conversation'
+  my_token: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   my_build:
     runs-on: ubuntu-latest
