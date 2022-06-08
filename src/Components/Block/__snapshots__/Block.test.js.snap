@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Block /> snapshot tests should render with no data 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "red",
+      "padding": "2rem",
+    }
+  }
+>
+  <h1>
+    hello
+  </h1>
+</div>
+`;
