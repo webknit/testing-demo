@@ -1,13 +1,12 @@
-name: CI
+name: Tests
+on: push
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-      - uses: actions/checkout@v3
-      
-      - name: build
-        run: npm run build
-      
-      - name: Percy Test
-        run:
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies & test
+        run: 
+        - npm install
         - npm run start
         - npx percy snapshot snapshots.yml
