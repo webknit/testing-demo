@@ -1,10 +1,9 @@
-name: Tests
-build:
-  runs-on: ubuntu-latest
-  - uses: actions/checkout@v2
-    - name: Install dependencies & test
-      run: 
-      - npm install
-      - npm run start
-      - npx percy snapshot snapshots.yml
-    
+name: CI
+  build:
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v3
+      
+      # Build
+      
+      - name: Percy Test
+        run: npx @percy/cli snapshot _site/ # or any directory such as public/
