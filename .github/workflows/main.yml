@@ -8,4 +8,6 @@ jobs:
         run: npm run build
       
       - name: Percy Test
-        run: npx @percy/cli snapshot public/ # or any directory such as public/
+        run:
+        - npm run start
+        - npx percy snapshot snapshots.yml
