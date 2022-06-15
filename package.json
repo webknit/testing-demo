@@ -17,12 +17,25 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "percy": "PERCY_TOKEN=7278d9978205ebfd91cec019a21d8c1fe8fe9ac01a17e303df5fbf536c890a3c percy snapshot ./public"
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "storybook:build": "build-storybook",
+    "storybook:percy": "npm run storybook:build &&  PERCY_TOKEN=7278d9978205ebfd91cec019a21d8c1fe8fe9ac01a17e303df5fbf536c890a3c percy storybook ./storybook-static"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -39,6 +52,20 @@
   },
   "devDependencies": {
     "@percy/cli": "^1.3.0",
-    "jest": "^28.1.1"
+    "@percy/storybook": "^4.2.1",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/node-logger": "^6.5.9",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "jest": "^28.1.1",
+    "prop-types": "^15.8.1",
+    "webpack": "^5.73.0"
   }
 }
